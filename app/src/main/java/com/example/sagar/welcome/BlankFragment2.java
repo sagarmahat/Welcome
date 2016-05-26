@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class BlankFragment extends Fragment implements ImageButton.OnClickListener, AdapterView.OnItemSelectedListener{
+public class BlankFragment2 extends Fragment implements ImageButton.OnClickListener, AdapterView.OnItemSelectedListener{
     private String mParam1;
     private String mParam2;
     private TextView txtdate;
@@ -33,7 +33,7 @@ public class BlankFragment extends Fragment implements ImageButton.OnClickListen
     private ImageButton dates;
     private SimpleDateFormat dateFormatter;
 
-    public BlankFragment() {
+    public BlankFragment2() {
         // Required empty public constructor
     }
     public interface fragment1{
@@ -74,18 +74,18 @@ public class BlankFragment extends Fragment implements ImageButton.OnClickListen
     private void setDateTimeField() {
         dates.setOnClickListener(this);
         Calendar newCalendar = Calendar.getInstance();
-     DatePickerDialog.OnDateSetListener mDateSetListener
-            = new DatePickerDialog.OnDateSetListener() {
-        public void onDateSet(DatePicker view, int selectedYear,
-                              int selectedMonth, int selectedDay) {
-            yy=selectedYear;
-            mm=selectedMonth;
-            dd=selectedDay;
-            //age.setDateOfBirth(startYear, startMonth, startDay);
-            txtdate.setText(""+dd+"-"+(mm+1)+"-"+yy);
-            //calculateAge();
-        }
-    };}
+        DatePickerDialog.OnDateSetListener mDateSetListener
+                = new DatePickerDialog.OnDateSetListener() {
+            public void onDateSet(DatePicker view, int selectedYear,
+                                  int selectedMonth, int selectedDay) {
+                yy=selectedYear;
+                mm=selectedMonth;
+                dd=selectedDay;
+                //age.setDateOfBirth(startYear, startMonth, startDay);
+                txtdate.setText(""+dd+"-"+(mm+1)+"-"+yy);
+                //calculateAge();
+            }
+        };}
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {

@@ -1,8 +1,5 @@
 package com.example.sagar.welcome;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,15 +12,21 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    Button a;
+//    Button a;
+//    Button b;
+//    Button c;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-a=(Button)findViewById(R.id.button);
-        a.setOnClickListener(this);
+//        a=(Button)findViewById(R.id.button);
+//        a.setOnClickListener(this);
+//        b=(Button)findViewById(R.id.buttona);
+//        b.setOnClickListener(this);
+//        c=(Button)findViewById(R.id.buttonb);
+//        c.setOnClickListener(this);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,12 +62,31 @@ a=(Button)findViewById(R.id.button);
 
     @Override
     public void onClick(View v) {
-        FragmentManager fm = getFragmentManager();
-        android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
-        //FragmentTransaction fragmentTransaction = fm.beginTransaction();
-        BlankFragment fm2 = new BlankFragment();
-        fragmentTransaction.add(R.id.fragment_container, fm2);
-        fragmentTransaction.commit();
+        switch(v.getId()){
+            case R.id.button:
+//            BlankFragment fragment = new BlankFragment();
+//            android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+//            fragmentTransaction.replace(R.id.fragment_container, fragment);
+//            fragmentTransaction.commit();
+//                Toast.makeText(MainActivity.this, "Button", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.buttona:
+//               contact fragment1 = new contact();
+//                android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment_container, fragment1);
+//                fragmentTransaction.commit();
+//                Toast.makeText(MainActivity.this, "Button10", Toast.LENGTH_SHORT).show();
 
+                break;
+            case R.id.buttonb:
+//                BlankFragment fragment = new BlankFragment();
+//                android.support.v4.app.FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment_container, fragment);
+//                fragmentTransaction.commit();
+                //Toast.makeText(MainActivity.this, "Button11", Toast.LENGTH_SHORT).show();
+
+                break;
+
+    }
     }
 }
